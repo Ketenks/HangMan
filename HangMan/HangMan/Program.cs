@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,23 +16,24 @@ namespace HangMan
             Console.WriteLine();
             
 
-            HangMan("");
+            HangMan();
 
             //keeps console open
             Console.ReadKey();
         }
         //BEGIN FUNCTION DECLARATION
-        static void HangMan(string input)
+        static void HangMan()
         {
             //preface
             Console.WriteLine("What is your name?\n");
-            input = Console.ReadLine();
-            Console.WriteLine();
+            string input = Console.ReadLine();
 
             //this is the big loop to reset the game after the game is completed
             bool looping = true;
             while (looping)
             {
+                Console.WriteLine();
+                Console.WriteLine();
                 Console.WriteLine("Welcome, " + input + ", to the public hearing for HangMan.\n");
                 Console.WriteLine("Will YOU save HangMan?");
                 Console.WriteLine("Then guess THIS word!\n");
@@ -244,3 +246,4 @@ namespace HangMan
        }
     }
 }
+
